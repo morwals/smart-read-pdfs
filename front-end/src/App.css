@@ -1,0 +1,280 @@
+/* App.css */
+
+/* Body and general layout */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f7fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: auto; /* Prevent scroll on the body */
+}
+
+/* Main container */
+.main-div {
+  background-color: white;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 100%; /* Set a max width to prevent large screens from stretching */
+  height: 90%; /* Allow height to be flexible */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: auto; /* Allow scroll within the main container */
+}
+
+/* Title */
+.main-h1 {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* File uploader section */
+.file-uploader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Error message styling */
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* Summary and Question Answering section */
+.summary-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Button for reset */
+.reset-btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.reset-btn:hover {
+  background-color: #45a049;
+}
+
+/* Scroll bar styling */
+.main-div::-webkit-scrollbar {
+  width: 8px;
+}
+
+.main-div::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
+
+.main-div::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+/* src/components/DocumentSummary.css */
+
+.doc-main {
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.doc-head {
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.doc-summary {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.5;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* src/components/FileUploader.css */
+
+.form-main {
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.form-h2 {
+  font-size: 22px;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.form-div2 {
+  margin-bottom: 15px;
+}
+
+input[type="file"] {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #fff;
+  font-size: 14px;
+}
+
+.form-btn {
+  background-color: #ca3eac;
+  color: white;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.form-btn:hover {
+  background-color: #c744b2;
+}
+
+.form-btn:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.form-err {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* src/components/QuestionAnswering.css */
+
+.QA-main-div {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 600px;
+  margin: 20px auto;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.QA-h1 {
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.QA-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.QA-btn {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #de6ee4;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.QA-btn:hover {
+  background-color: #a00fa2;
+}
+
+.QA-btn:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.QA-error {
+  color: red;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.QA-ans-div {
+  background-color: #e9f7ef;
+  padding: 12px;
+  margin-top: 15px;
+  border-radius: 6px;
+  border-left: 5px solid #2ecc71;
+}
+
+.QA-h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.QH-div {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+}
+
+.QH-h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.QH-div2 {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.QH-div3 {
+  background-color: white;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.p-text {
+  font-weight: bold;
+  color: #333;
+}
+
+.p-ans {
+  color: #007bff;
+}
