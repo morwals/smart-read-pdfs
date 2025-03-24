@@ -7,6 +7,7 @@ This full-stack application allows users to upload text documents (PDF or TXT), 
 ### Overview
 
 The application follows a client-server architecture with:
+
 - A React frontend for user interactions
 - A Flask backend for processing documents and interfacing with AI
 - The Gemini API for generating summaries and answering questions
@@ -32,7 +33,7 @@ The backend server provides two main API endpoints:
 
 ### External Services
 
-- **Anthropic Claude API**: Provides AI capabilities for document summarization and question answering
+- **GEMINI API**: Provides AI capabilities for document summarization and question answering
 
 ## Database Architecture
 
@@ -46,6 +47,7 @@ The current application does not use a database. It operates with a completely s
 - **No Persistence**: The application doesn't maintain any record of previous uploads or questions once the session ends.
 
 **Benefits of the Current Approach**:
+
 - Simplicity in deployment and maintenance
 - No database configuration required
 - Privacy-focused (data isn't stored)
@@ -59,6 +61,7 @@ The current application does not use a database. It operates with a completely s
 - No user authentication or multi-user support
 
 Future improvements could include:
+
 - Support for more document formats (DOCX, HTML, etc.)
 - Database integration for document and history persistence
 - User accounts and saved document history
