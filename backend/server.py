@@ -23,11 +23,9 @@ def upload_file():
     if file.filename == '':
         return jsonify({"error": "No file selected"}), 400
     
-    # Check file type
     if not (file.filename.endswith('.pdf') or file.filename.endswith('.txt')):
         return jsonify({"error": "Only PDF and TXT files are supported"}), 400
     
-    # Save the file temporarily
     temp_file = tempfile.NamedTemporaryFile(delete=False)
     file.save(temp_file.name)
     temp_file.close()
@@ -47,10 +45,8 @@ def upload_file():
                     os.unlink(temp_file.name)
                     return jsonify({"error": "Text file too large, exceeds equivalent of 3 pages"}), 400
         
-        # Generate summary
         summary = generate_summary(text)
         
-        # Return result
         response = {
             "success": True,
             "summary": summary["candidates"][0]["content"]["parts"][0]["text"],
@@ -148,7 +144,7 @@ def make_api_call(question, context):
         response = requests.post(url, headers=headers, params=param, json=body)
         response.raise_for_status()  # Raise an HTTPError for bad responses (4xx and 5xx)
         data = response.json()  # Parse the JSON response
-        # print("Response Data:", data)
+        print("Response Data:", data)
         return data
     except requests.exceptions.RequestException as e:
         print(f"An error occurred: {e}")
